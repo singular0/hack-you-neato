@@ -37,9 +37,9 @@ and remote control and scheduled runs as a consequence.
 
 ### Pinout
 
-[!WARNING]
-I am not an electric engineer and this may potentially contain some critical commutation error
-that could lead to the damage of controller and/or the vacuum electronics. Do it on your own risk.
+> [!WARNING]
+> I am not an electric engineer and this may potentially contain some critical commutation error
+> that could lead to the damage of controller and/or the vacuum electronics. Do it on your own risk.
 
 You must short 74HC4051 `VEE` and `GND`.
 
