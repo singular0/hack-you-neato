@@ -23,6 +23,9 @@ risks of closed ecosystems.
 
 ## The Hack
 
+If you own models prior to D8, I suggest that you look at more feature reach solutions like
+[neato-connected](https://github.com/Philip2809/neato-connected).
+
 Unlike earlier models D8, D9 and D10 do not have open serial debug interface that would allow
 external control. So realistically the only app-based function that could be restored with
 relatively low effort is remote and scheduled start via start button press emulation.
