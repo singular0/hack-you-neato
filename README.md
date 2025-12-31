@@ -37,22 +37,22 @@ and remote control and scheduled runs as a consequence.
 
 ### Pinout
 
-**Disclaimer**: I am not an electric engineer and this may potentially contain some critical
-commutation error that could lead to the damage of controller and/or the vacuum electronics.
-Do on your own risk.
+[!WARNING]
+I am not an electric engineer and this may potentially contain some critical commutation error
+that could lead to the damage of controller and/or the vacuum electronics. Do it on your own risk.
 
 You must short 74HC4051 `VEE` and `GND`.
 
-ESP32C3 | 74HC4051 | Neato Controls Breakout
-------- | -------- | -----------------------
-`GPIO1` | `E`      |
-`GPIO2` | `S2`     |
-`GPIO3` | `S1`     |
-`GPIO4` | `S0`     |
-`5V`    | `VCC`    | `+5V` debug point
-`GND`   | `GND`    | `GND` debug point
-        | `Z`      | Play button
-        | `Y0`     | Play button
+| ESP32C3 | 74HC4051 | Neato Controls Breakout |
+| ------- | -------- | ----------------------- |
+| `GPIO1` | `E`      |                         |
+| `GPIO2` | `S2`     |                         |
+| `GPIO3` | `S1`     |                         |
+| `GPIO4` | `S0`     |                         |
+| `5V`    | `VCC`    | `+5V` debug point       |
+| `GND`   | `GND`    | `GND` debug point       |
+|         | `Z`      | Play button             |
+|         | `Y0`     | Play button             |
 
 ### Mount
 
