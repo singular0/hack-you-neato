@@ -45,14 +45,14 @@ You must short 74HC4051 `VEE` and `GND`.
 
 | ESP32C3 | 74HC4051 | Neato Controls Breakout |
 | ------- | -------- | ----------------------- |
-| `GPIO1` | `E`      |                         |
-| `GPIO2` | `S2`     |                         |
-| `GPIO3` | `S1`     |                         |
-| `GPIO4` | `S0`     |                         |
+| `GPIO1` | `E`      | &mdash;                 |
+| `GPIO2` | `S2`     | &mdash;                 |
+| `GPIO3` | `S1`     | &mdash;                 |
+| `GPIO4` | `S0`     | &mdash;                 |
 | `5V`    | `VCC`    | `+5V` debug point       |
 | `GND`   | `GND`    | `GND` debug point       |
-|         | `Z`      | Play button             |
-|         | `Y0`     | Play button             |
+| &mdash; | `Z`      | Play button             |
+| &mdash; | `Y0`     | Play button             |
 
 ### Mount
 
