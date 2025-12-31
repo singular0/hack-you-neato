@@ -1,0 +1,83 @@
+esphome:
+  name: hack-you-neato
+  on_boot:
+    priority: 800
+    then:
+      - output.turn_off: CD4051_S0
+      - output.turn_off: CD4051_S1
+      - output.turn_off: CD4051_S2
+      - output.turn_off: CD4051_E
+      - output.turn_off: LED
+
+esp32:
+  board: seeed_xiao_esp32c3
+  framework:
+    type: esp-idf
+
+logger:
+
+api:
+  password: ""
+
+ota:
+  - platform: esphome
+    password: ""
+
+wifi:
+  ap:
+    ssid: Hack You, Neato!
+
+captive_portal:
+
+output:
+  - platform: gpio
+    id: CD4051_S0
+    pin: GPIO4
+  - platform: gpio
+    id: CD4051_S1
+    pin: GPIO3
+  - platform: gpio
+    id: CD4051_S2
+    pin: GPIO2
+  - platform: gpio
+    id: CD4051_E
+    pin: GPIO1
+    inverted: true
+  - platform: gpio
+    id: LED
+    pin: GPIO8
+    inverted: true
+
+button:
+  - platform: template
+    name: Start/Pause Clean
+    icon: mdi:robot-vacuum-variant
+    on_press:
+      - output.turn_off: CD4051_S0 #
+      - output.turn_off: CD4051_S1 # } select Y0
+      - output.turn_off: CD4051_S2 #
+      - delay: 5ms
+      - output.turn_on: CD4051_E
+      - output.turn_on: LED
+      - delay: 500ms
+      - output.turn_off: CD4051_E
+      - output.turn_off: LED
+  - platform: template
+    name: Cancel Clean
+    icon: mdi:robot-vacuum-variant-off
+    on_press:
+      - output.turn_off: CD4051_S0 #
+      - output.turn_off: CD4051_S1 # } select Y0
+      - output.turn_off: CD4051_S2 #
+      - delay: 5ms
+      - output.turn_on: CD4051_E
+      - output.turn_on: LED
+      - delay: 500ms
+      - output.turn_off: CD4051_E
+      - output.turn_off: LED
+      - delay: 100ms
+      - output.turn_on: CD4051_E
+      - output.turn_on: LED
+      - delay: 500ms
+      - output.turn_off: CD4051_E
+      - output.turn_off: LED
