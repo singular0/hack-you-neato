@@ -26,6 +26,7 @@ ota:
 wifi:
   ap:
     ssid: Hack You, Neato!
+    password: 0u70fCu210c17y
 
 captive_portal:
 
